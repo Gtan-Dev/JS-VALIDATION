@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>JS-Validation</title>
+</head>
+<body>
+
+  <h2>Registration form</h2>
+  <form id="sub">
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br><br>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("sub").onsubmit = function(event) {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+
+      // Check if name field is empty
+      if (name === "") {
+        alert("Please enter your name.");
+        event.preventDefault();
+        return;
+      }
+
+      // Check if email field is empty
+      if (email === "") {
+        alert("Please enter your email.");
+        event.preventDefault();
+        return;
+      }
+    };
+  </script>
+</body>
+</html>
